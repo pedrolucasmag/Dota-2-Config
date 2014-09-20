@@ -1,0 +1,1 @@
+-steam -language en -override_vpk -dashboard international_2012 +con_enable 1 -game dota 
