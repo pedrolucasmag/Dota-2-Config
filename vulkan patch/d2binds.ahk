@@ -2,9 +2,9 @@
 #Persistent
 #NoTrayIcon
 SendMode Input ; Recommended for new scripts due to its superior speed and reliability.
-Run, C:\Program Files (x86)\Steam\Steam.exe ;Open Steam
+Run, C:\Program Files (x86)\Steam\Steam.exe
 
-SetTimer process_watcher, 90000 ;;Close Autohotkey If Steam is Closed
+SetTimer process_watcher, 90000
 
 process_watcher:
 	Process Exist, Steam.exe
@@ -26,6 +26,12 @@ Space & g:: send {F3}{Numpad4} ;Courier Deliver + Speed Burst
 Space & F1::Send,{F1 down} ;Camera on Hero
 Space & sc029::Send,{F15 down}  ;Chat Wheel
 Space & sc029 up::Send,{F15 up} ;Chat Wheel
+~$Space::
+KeyWait, Space, L D T3
+Send {F18}
+KeyWait, Space
+Send {F18}
+
 ~space::space ; allow spaces still
 
 t:: ;toggle runes
